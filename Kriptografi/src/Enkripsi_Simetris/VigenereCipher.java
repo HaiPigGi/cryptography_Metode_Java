@@ -48,17 +48,17 @@ public class VigenereCipher {
         System.out.println("=========================");
         
         
-        System.out.println("Masukkan Plain Text : ");
+        System.out.print("Masukkan Plain Text : ");
         String plaintext = scan.next();
         String upPlain=  plaintext.toUpperCase();
-        System.out.println("Masukkan Key");
+        System.out.print("Masukkan Key : ");
         String key = scan.next();
         String upKey=key.toUpperCase();
 
         String encryptedText = encrypt(upPlain, upKey);
         System.out.println("Encrypted: " + encryptedText);
 
-        String decryptedText = decrypt(encryptedText, key);
+        String decryptedText = decrypt(encryptedText, upKey);
         System.out.println("Decrypted: " + decryptedText);
     }
 }
